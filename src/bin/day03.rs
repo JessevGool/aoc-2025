@@ -74,6 +74,7 @@ impl Bank {
             let remaining = n - i;
 
             //Check if new number is higher than last number
+            //Pop if it is but also make sure we can still reach the goal of x 
             while !stack.is_empty()
                 && stack.last().unwrap() < &d
                 && stack.len() - 1 + remaining >= to_pick
