@@ -69,7 +69,7 @@ fn draw_lines(christmas_tree: &mut ChristmasTree, start_x: usize, start_y: usize
     splits
 }
 
-fn part2(christmas_tree: &ChristmasTree) -> Result<i128> {
+pub fn part2(christmas_tree: &ChristmasTree) -> Result<i128> {
     let mut start: Option<(usize, usize)> = None;
 
     'outer: for x in 0..christmas_tree.columns.len() {
@@ -154,12 +154,12 @@ fn count_timelines(
 }
 
 
-struct ChristmasTree {
+pub struct ChristmasTree {
     columns: Vec<Column>,
 }
 
 impl ChristmasTree {
-    fn new(input: &String) -> Self {
+    pub fn new(input: &String) -> Self {
         let input_lines = lines(&input);
         let mut columns: Vec<Column> = Vec::new();
         for line in input_lines {
