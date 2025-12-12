@@ -10,6 +10,7 @@ minilp = "0.2"
 itertools = "0.14.0"
 rayon = "1.11.0"
 regex = "1.12.2"
+atoi = "2.0.0"
 
 [[bench]]
 name = "day07"
